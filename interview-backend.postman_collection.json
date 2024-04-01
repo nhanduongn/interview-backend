@@ -1,0 +1,579 @@
+{
+	"info": {
+		"_postman_id": "ca0d9efa-8b8f-484d-8149-de1d6a33adb0",
+		"name": "backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10405226"
+	},
+	"item": [
+		{
+			"name": "Teacher create exam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExNzk4NTQ1LCJleHAiOjE3MTE4ODQ5NDV9.Ztb6YNM_H5WU0GCZsPWTkfpZPmsWqH5MnEr553ai1es",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Test 3\",\n    \"description\": \"perform substraction calculations 3\",\n    \"questions\": [\n        {\n     \n            \"ques\": \"12 - 10\",\n            \"answers\": [\n                {\n            \n                    \"ans\": \"2\",\n                    \"answer\": true\n                    \n                },\n                {\n          \n                    \"ans\": \"607\",\n                    \"answer\": false\n                },\n                {\n                 \n                    \"ans\": \"4\",\n                    \"answer\": false\n                },\n                {\n                    \"ans\": \"5\",\n                    \"answer\": false\n                }\n            ]\n        },\n        {\n       \n            \"ques\": \"25 - 20\",\n            \"answers\": [\n                {\n                  \n                    \"ans\": \"5\",\n                    \"answer\": true\n                },\n                {\n               \n                    \"ans\": \"2\",\n                    \"ansOfTeacher\": false\n                },\n                {\n                    \n                    \"ans\": \"4\",\n                    \"answer\": false\n                },\n                {\n                 \n                    \"ans\": \"5\",\n                    \"answer\": false\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/create-exam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"create-exam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher update exam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n        \"name\": \"Test 2 update\",\n        \"description\": \"perform addition calculations 2\",\n        \"questions\": [\n            {\n                \"id\": 6,\n                \"ques\": \"25 + 20\",\n                \"answers\": [\n                    {\n                        \"id\": 17,\n                        \"ans\": \"45\",\n                        \"answer\": true\n                    },\n                    {\n                        \"id\": 18,\n                        \"ans\": \"102\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": 19,\n                        \"ans\": \"43\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": 20,\n                        \"ans\": \"45\",\n                        \"answer\": false\n                    }\n                ]\n            },\n            {\n                \"id\": 5,\n                \"ques\": \"12 + 10\",\n                \"answers\": [\n                    {\n                        \"id\": 22,\n                        \"ans\": \"22\",\n                        \"answer\": true\n                    },\n                    {\n                        \"id\": 22,\n                        \"ans\": \"67\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": 23,\n                        \"ans\": \"84\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": 24,\n                        \"ans\": \"95\",\n                        \"answer\": false\n                    }\n                ]\n            }\n        ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/update-exam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"update-exam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher read all exam",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTAwMTg2LCJleHAiOjE3MTE5ODY1ODZ9.aeVEOY5IABfAMk8GRq7crsXBHgAoVuzrLmTdICpHVtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/student/read/all/exam?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"read",
+						"all",
+						"exam"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher read exam by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/student/read-exam/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"read-exam",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExNzczOTU5LCJleHAiOjE3MTE4NjAzNTl9.4788TPgaa36uGtEilhH1E4t4gTIffRmL2QU07uGs13c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"teacher@example.com\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHVkZW50QUBleGFtcGxlLmNvbSIsImlhdCI6MTcxMTg3NjM1MywiZXhwIjoxNzExOTYyNzUzfQ.8PTrOuOO1YUaBmGgT_XElMNe8SFRoenZ7rXP1ZliSBk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teach create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExNzk4NTQ1LCJleHAiOjE3MTE4ODQ5NDV9.Ztb6YNM_H5WU0GCZsPWTkfpZPmsWqH5MnEr553ai1es",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"StudentB\",\n    \"email\": \"studentB@example.com\",\n    \"password\": \"12345678\",\n    \"role\": \"STUDENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teach update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTAwMTg2LCJleHAiOjE3MTE5ODY1ODZ9.aeVEOY5IABfAMk8GRq7crsXBHgAoVuzrLmTdICpHVtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"4\",\n    \"username\": \"StudentB\",\n    \"email\": \"studentB@example.com\",\n    \"password\": \"12345678\",\n    \"role\": \"STUDENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/update-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"update-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read all user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/read/all-user?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"read",
+						"all-user"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/read/user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"read",
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user by email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/delete/user?email=studentD@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"delete",
+						"user"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "studentD@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete exam by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTMyODM1LCJleHAiOjE3MTIwMTkyMzV9.WY399LXWbISdzh_CFThcN1PUE1mFcEnqcp85KAurAp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/delete-exam/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"delete-exam",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student test and return result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHVkZW50QkBleGFtcGxlLmNvbSIsImlhdCI6MTcxMTkzNDMwNiwiZXhwIjoxNzEyMDIwNzA2fQ.rXavYo_2eYpnd70n1QnhoMbXP6zXVaL4rCbrVTsGC0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"examId\": 1,\n    \"answers\": [1,5]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/student/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History test",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZWFjaGVyQGV4YW1wbGUuY29tIiwiaWF0IjoxNzExOTAwMTg2LCJleHAiOjE3MTE5ODY1ODZ9.aeVEOY5IABfAMk8GRq7crsXBHgAoVuzrLmTdICpHVtI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/teacher/history-test/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"teacher",
+						"history-test",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History test of student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdHVkZW50QUBleGFtcGxlLmNvbSIsImlhdCI6MTcxMTgwNzUwMSwiZXhwIjoxNzExODkzOTAxfQ.8YXjxj2MkSG2AoQBHjbvq3Sey_psiGUHgJU9B2JmRp0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/student/history-test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"history-test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
