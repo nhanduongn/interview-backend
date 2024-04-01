@@ -22,7 +22,6 @@ application:
       refresh-token:
         expiration: 172800000
 
-
 logging:
   level:
     com:
